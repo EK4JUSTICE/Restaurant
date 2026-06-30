@@ -3,6 +3,7 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 
 export default defineConfig({
+  base: '/', // 👈 Add this line right here to fix asset loading!
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
